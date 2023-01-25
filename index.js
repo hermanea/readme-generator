@@ -39,7 +39,7 @@ inquirer.prompt ([
         type:'list',
         name:'license',
         message:'Please select the license your project utilizes.',
-        choices: ['None','MIT','Apache 2.0','Mozilla Public','GNU General Public v3.0']
+        choices: ['None','MIT','Apache 2.0']
     },
     {
         type:'input',
