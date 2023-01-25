@@ -14,89 +14,89 @@ function renderLicenseBadge(license) {
 // The following functions add the corresponding sections to the README in order.
 function des(description){
   MD = MD + `
-  ## Description
+## Description
 
-  ${description}    
-  `  
+${description}    
+`  
 }
 
 function toc(){
   MD = MD + `
-  ## Table of Contents
+## Table of Contents
 
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contribution](#contribution)
-  - [Testing](#testing)
-  - [License](#license)
-  - [Questions](#questions)  
-  `
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Testing](#testing)
+- [License](#license)
+- [Questions](#questions)  
+`
 }
 
 function inst(install){
   MD = MD + `
-  ## Installation
+## Installation
 
-  ${install}  
-  `
+${install}  
+`
 }
 
 function use(usage){
   MD = MD + `
-  ## Usage
+## Usage
 
-  ${usage}
-  `
+${usage}
+`
 }
 
 function cont(contribution){
   MD = MD + `
-  ## Contributing
+## Contributing
 
-  ${contribution}  
-  `
+${contribution}  
+`
 }
 
 function testing(test){
   MD = MD + `
-  ## Testing
+## Testing
 
-  ${test}  
-  `
+${test}  
+`
 }
 
 function lic(license){
   MD = MD + `
-  ## License
+## License
 
-  ${license}  
-  `
+${license}  
+`
 }
 
 function questions(github,email){
   MD = MD + `
-  ## Questions
+## Questions
 
-  For any questions regarding this project, please contact the developer at: ${email}
+For any questions regarding this project, please contact the developer at: ${email}
 
-  You may also visit the developer's Github profile here: (https://github.com/${github})  
-  `
+You may also visit the developer's Github profile here: (https://github.com/${github})  
+`
 }
 
 // Generates final markdown buy running all functions then returns the string.
 function generateMarkdown(data) {
   MD = `# ${data.title}
   `
-  renderLicenseBadge(data.license);
-  des(data.description);
-  toc();
-  inst(data.install);
-  use(data.usage);
-  cont(data.contribution);
-  testing(data.test);
-  lic(data.license);
-  questions(data.github,data.email);    
-  return MD;
+renderLicenseBadge(data.license);
+des(data.description);
+toc();
+inst(data.install);
+use(data.usage);
+cont(data.contribution);
+testing(data.test);
+lic(data.license);
+questions(data.github,data.email);    
+return MD;
 }
 
 //Exports generateMarkdown function.

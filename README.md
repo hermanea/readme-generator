@@ -1,41 +1,43 @@
 # Readme Generator
   
-  ## Description
+## Description
 
-  Placeholder    
+The purpose of this project was to practice creating a command line application that would generate the user a README based on their responses to several prompts.  
   
-  ## Table of Contents
+## Table of Contents
 
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contribution](#contribution)
-  - [Testing](#testing)
-  - [License](#license)
-  - [Questions](#questions)  
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Testing](#testing)
+- [License](#license)
+- [Questions](#questions)  
   
-  ## Installation
+## Installation
 
-  Placeholder  
+To run this application, you must npm ini and install inquirer.
   
-  ## Usage
+## Usage
 
-  Placeholder
+To use this application, execture node index.js in the terminal.
+
+Here is a video showing standard usage: (https://drive.google.com/file/d/1tKFeInGapOBGEZDamy123IX442x0rsnO/view)
   
-  ## Contributing
+## Contributing
 
-  Placeholder  
+N/A
   
-  ## Testing
+## Testing
 
-  Placeholder  
+N/A  
   
-  ## License
+## License
 
-  None  
+This project utilizes the MIT license.
   
-  ## Questions
+## Questions
 
-  For any questions regarding this project, please contact the developer at: evanaherman@gmail.com
+For any questions regarding this project, please contact the developer at: evanaherman@gmail.com
 
-  You may also visit the developer's Github profile here: (https://github.com/hermanea)  
+You may also visit the developer's Github profile here: (https://github.com/hermanea)  
   
