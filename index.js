@@ -1,51 +1,61 @@
-// TODO: Include packages needed for this application
-
-// TODO: Create an array of questions for user input
+// Uses generateMarkdown Javascript file, inquirer, and fs.
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
+// Inquirer used to ask questions and populate README sections.
 inquirer.prompt ([
     {
-        type:'',
-        name:'',
-        message:'',
+        type:'input',
+        name:'title',
+        message:'Please enter the title of your project.',
     },
     {
-        type:'',
-        name:'',
-        message:'',
+        type:'input',
+        name:'description',
+        message:'Please write a brief description of your project.',
     },
     {
-        type:'',
-        name:'',
-        message:'',
+        type:'input',
+        name:'install',
+        message:'Please explain how to install your project.',
     },
     {
-        type:'',
-        name:'',
-        message:'',
+        type:'input',
+        name:'usage',
+        message:'Please explain how one should use your project.',
     },
     {
-        type:'',
-        name:'',
-        message:'',
+        type:'input',
+        name:'contribution',
+        message:'Please explain any contribution guidelines.',
     },
     {
-        type:'',
-        name:'',
-        message:'',
+        type:'input',
+        name:'test',
+        message:'Please explain any testing instructions.',
+    },
+    {
+        type:'list',
+        name:'license',
+        message:'Please select the license your project utilizes.',
+        choices: ['None','MIT','Apache 2.0','Mozilla Public','GNU General Public v3.0']
+    },
+    {
+        type:'input',
+        name:'github',
+        message:'Please enter your github username.',
+    },
+    {
+        type:'input',
+        name:'email',
+        message:'Please enter your email address.',
     },
 
 ])
-.then(response => {
-    console.log(response)
-    fs.writeFile()
-})
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+// Creates the README using fs.writeFile.
+.then((data) => {
+    fs.writeFile('README.md', generateMarkdown.generateMarkdown(data), (err) =>
+        err ? console.log(err) : console.log('Success!'))    
+});
